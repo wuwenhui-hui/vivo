@@ -1,0 +1,172 @@
+[{
+    "1001": {
+        "id": 1001,
+        "name1": "手机",
+        "name2": "全部手机>",
+        "middle": [{ "imgSrc": "img/nav/list1/1.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/2.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/3.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/4.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/5.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/6.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/7.png", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list1/8.png", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list1/2.1.png", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list1/2.2.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list1/2.3.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.4.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.5.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.6.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.7.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.8.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list1/2.9.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" }
+
+        ]
+    },
+
+    "1002": {
+        "id": 1002,
+        "name1": "手机充电",
+        "name2": "全部手机充电>",
+        "middle": [{ "imgSrc": "img/nav/list2/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list2/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list2/3.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list2/4.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list2/5.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list2/2.1.png", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.2.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.3.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.4.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.5.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.6.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.7.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.8.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list2/2.9.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" }
+
+        ]
+    },
+
+    "1003": {
+        "id": 1003,
+        "name1": "手机配件",
+        "name2": "全部手机配件>",
+        "middle": [{ "imgSrc": "img/nav/list3/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list3/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list3/3.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list3/2.1.png", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.2.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.3.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list3/2.4.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.5.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.6.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.7.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.8.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list3/2.9.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.10.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.11.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list3/2.12.png", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" }
+
+        ]
+    },
+
+    "1004": {
+        "id": 1004,
+        "name1": "音乐设备",
+        "name2": "全部音乐设备>",
+        "middle": [{ "imgSrc": "img/nav/list4/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list4/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list4/3.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list4/2.1.webp", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.2.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.3.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.4.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list4/2.5.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.6.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list4/2.7.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.8.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.9.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.10.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.11.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list4/2.12.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" }
+
+        ]
+    },
+
+    "1005": {
+        "id": 1005,
+        "name1": "智能硬件",
+        "name2": "全部智能硬件>",
+        "middle": [
+            { "imgSrc": "img/nav/list5/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list5/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list5/3.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list5/4.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list5/5.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [
+            { "imgSrc": "img/nav/list5/2.1.webp", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list5/2.2.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list5/2.3.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list5/2.4.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list5/2.5.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list5/2.6.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list5/2.7.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list5/2.8.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list5/2.9.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" }
+
+        ]
+    },
+
+    "1006": {
+        "id": 1006,
+        "name1": "游戏摄影",
+        "name2": "全部游戏摄影>",
+        "middle": [{ "imgSrc": "img/nav/list6/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list6/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list6/3.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list6/2.1.webp", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list6/2.2.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list6/2.3.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.4.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.5.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list6/2.6.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list6/2.7.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list6/2.8.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.9.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.10.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.11.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list6/2.12.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" }
+
+        ]
+    },
+
+    "1007": {
+        "id": 1007,
+        "name1": "日用出行",
+        "name2": "全部日用出行>",
+        "middle": [{ "imgSrc": "img/nav/list7/1.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list7/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list7/3.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list7/2.jpg", "name": "vivo NEX" },
+            { "imgSrc": "img/nav/list7/3.jpg", "name": "vivo NEX" }
+        ],
+        "foot": [{ "imgSrc": "img/nav/list7/2.1.webp", "name": "vivo Y30", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list7/2.2.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "hot" },
+            { "imgSrc": "img/nav/list7/2.3.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.4.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.5.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.6.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.7.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.8.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" },
+            { "imgSrc": "img/nav/list7/2.9.webp", "name": "vivo Y30 qianggou qianggou", "hot": "img/qita/qianggou.png", "class": "nohot" }
+
+        ]
+    }
+
+
+}]

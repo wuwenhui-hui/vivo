@@ -18,6 +18,11 @@ gulp.task("copyHtml", done => {
     gulp.src("html/*.html !index.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
     done();
 })
+
+gulp.task("copyJson", done => {
+    gulp.src("json/*.json").pipe(gulp.dest("dist/json")).pipe(connect.reload());
+    done();
+})
 gulp.task("copyIndex", done => {
     gulp.src("html/index.html").pipe(gulp.dest("dist")).pipe(connect.reload());
     done();
@@ -34,12 +39,13 @@ gulp.task("copyScss", done => {
 gulp.task("watch", done => {
     gulp.watch("html/index.html", gulp.series("copyIndex"));
     gulp.watch("html/*.html", gulp.series("copyHtml"));
+    gulp.watch("json/*.json", gulp.series("copyJson"));
     gulp.watch("img/**", gulp.series("copyImg"));
     gulp.watch("sass/*.scss", gulp.series("copyScss"));
     gulp.watch("js/*.js", gulp.series("babel"));
     done();
 })
-gulp.task("bulid", gulp.series("copyIndex", "copyHtml", "copyImg", "copyScss", "babel"))
+gulp.task("bulid", gulp.series("copyIndex", "copyJson", "copyHtml", "copyImg", "copyScss", "babel"))
 gulp.task("server", done => {
     connect.server({
         root: "dist",

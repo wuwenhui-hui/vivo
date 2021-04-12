@@ -650,21 +650,113 @@
 
     <div class="banner-nav-wrap">
         <div class="banner-nav">
+            <li data-id="1001"><a href="#">手机 <span class="fr"> > </span></a></li>
+            <li data-id="1002"><a href="#">手机充电 <span class="fr"> > </span></a></li>
+            <li data-id="1003"><a href="#">手机配件 <span class="fr"> > </span></a></li>
+            <li data-id="1004"><a href="#">音乐设备 <span class="fr"> > </span></a></li>
+            <li data-id="1005"><a href="#">智能硬件 <span class="fr"> > </span></a></li>
+            <li data-id="1006"><a href="#">游戏摄影 <span class="fr"> > </span></a></li>
+            <li data-id="1007"><a href="#">日用出行 <span class="fr"> > </span></a></li>
+        </div>
 
-            <li><a href="#">手机 <span class="fr"> > </span></a></li>
-            <li><a href="#">手机充电 <span class="fr"> > </span></a></li>
-            <li><a href="#">手机配件 <span class="fr"> > </span></a></li>
-            <li><a href="#">音乐设备 <span class="fr"> > </span></a></li>
-            <li><a href="#">智能硬件 <span class="fr"> > </span></a></li>
-            <li><a href="#">游戏摄影 <span class="fr"> > </span></a></li>
-            <li><a href="#">日用出行 <span class="fr"> > </span></a></li>
+        <div class="banner-nav-list">
+            <div class="bnl-hover">
+                <div class="bnl-head">
+                    <!-- <p class="fl">手机</p>
+                    <p class="fr"><a>全部手机></a></p> -->
+                </div>
+                <div class="bnl-middle">
+
+                    <!-- <li><a href="#" style="background-image: url('img/nav/list1/1.png');background-size: 156px 50px;">vivo NEX</a></li> -->
+
+                </div>
+                <div class="bnl-foot">
+                    <!-- <li>
+                        <p class="hot"><img src="img/qita/qianggou.png" alt=""></p>
+                        <a href="#"><img src="img/nav/list1/2.1.png" alt=""><span>vivo TWS Neo 真无线耳机erji耳机erji </span></a>
+                    </li> -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container banner-xia">
+        <ul>
+            <li class="floor">
+                <a href="#"><img src="img/banner-xia/1.jpg" alt=""></a>
+            </li>
+            <li class="floor">
+                <a href="#"><img src="img/banner-xia/2.jpg" alt=""></a>
+            </li>
+            <li class="floor">
+                <a href="#"><img src="img/banner-xia/3.jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <div class="container section">
+        <div class="miaosha-head">
+            <img src="img/qita/xianshims.png" alt="">
+            <div class="djs">距离结束
+                <p>02</p>时
+                <p>02</p>分
+                <p>02</p>秒
+            </div>
+            <a href="#" class="fr">更多场次></a>
+        </div>
+        <div class="miaosha-main">
+            <ul>
+                <li>
+                    <div>
+                        <a href="#"><img src="img/miaosha/1.png" alt=""></a>
+                        <p>vivo 18W 10000mAh双向快充双向快充双向快充 </p>
+                        <p>直降50元</p>
+                        <p><span>￥</span>89<span>￥99</span></p>
+                        <div class="mshot"><img src="img/qita/xianshicx.png" alt=""></div>
+                    </div>
+                </li>
+                <li class="last-ms-mian">
+                    <div>
+                        <h4>下一场</h4>
+                        <h3>20:00</h3>
+                        <a href="#">去看看</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer container">
+
+        <div class="footer-head">
+            <ul>
+                <li>官方正品</li>
+                <li>顺丰急速快递</li>
+                <li>全国联保</li>
+                <li>免费定制</li>
+            </ul>
 
         </div>
     </div>
 
+
+
+
+
     <script src="js/jquery.js"></script>
+
     <script>
         $(function() {
+
+            $("a:visited").css({
+                "text-decoration": "none"
+            })
             var Index = 0;
             var i = 0;
             $(".lunbo li").eq(i).fadeIn().siblings().fadeOut();
@@ -698,7 +790,7 @@
             $(".vp-header-hover1").hover(function() {
                     console.log($(".vp-mainer-nav li").eq(Index).text())
                     $(".vp-mainer-nav li").eq(Index).find("a").css({
-                        "color": "green"
+                        "color": "#888"
                     }).end().siblings().find("a").css({
                         "color": "#242933"
                     });
@@ -858,16 +950,67 @@
 
             $(".vp-mainer-nav li").mouseout(function() {
                 $(".vp-mainer-nav li").find("a").css({
-                        "color": "#242933"
-                    })
-                    //     $(".vp-header-hover1").hide().css({
-                    //         "z-index": "0"
-                    //     }).stop().animate({
-                    //         "height": 0
-                    //     }).find(".list1").fadeOut();
+                    "color": "#242933"
+                })
 
 
             })
+
+            //列表函数ajax
+            var listdex;
+            $(".banner-nav li").mouseover(function() {
+                var dataid = $(this).attr("data-id");;
+                listdex = $(this).index();
+                // console.log(listdex, dataid);
+                $(this).addClass("bn-active").siblings().removeClass("bn-active")
+                $(".banner-nav-list").show()
+
+                $.ajax({
+                    url: "json/hoverlist.json",
+                    success: listShow
+                })
+
+                function listShow(result) {
+                    var res = result[0];
+                    console.log(res[dataid].foot);
+
+                    var str1 = ``,
+                        str2 = ``,
+                        str3 = ``;
+                    str1 = `<p class="fl">${res[dataid].name1}</p>
+                    <p class="fr"><a>${res[dataid].name2}></a></p>`;
+                    for (let i = 0; i < res[dataid].middle.length; i++) {
+                        str2 += `<li><a href="#" style="background-image: url(${res[dataid].middle[i].imgSrc});background-size: 156px 50px;">${res[dataid].middle[i].name}</a></li>`;
+                    }
+                    for (let i = 0; i < res[dataid].foot.length; i++) {
+                        str3 += `<li>
+                        <p class=${res[dataid].foot[i].class}><img src=${res[dataid].foot[i].hot} alt=""></p>
+                        <a href="#"><img src=${res[dataid].foot[i].imgSrc} alt=""><span>${res[dataid].foot[i].name}</span></a>
+                    </li>`;
+                    }
+                    $(".bnl-head").html(str1);
+                    $(".bnl-middle").html(str2);
+                    $(".bnl-foot").html(str3);
+
+
+                }
+
+            })
+            $(".banner-nav li").mouseout(function() {
+                $(".banner-nav li").removeClass("bn-active")
+                $(".banner-nav-list").hide()
+            })
+            $(".banner-nav-list").hover(function() {
+                        $(".banner-nav li").eq(listdex).addClass("bn-active")
+                        $(".banner-nav-list").show()
+
+                    },
+
+                    function() {
+                        $(".banner-nav li").removeClass("bn-active")
+                        $(".banner-nav-list").hide();
+                    })
+                //列表函数ajax  end
 
         })
     </script>
