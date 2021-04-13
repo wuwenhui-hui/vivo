@@ -1,0 +1,196 @@
+section {
+    width: 860px;
+    margin: 100px auto;
+    min-height: 670px;
+    background-color: #fff;
+    p:nth-child(2) {
+        margin-top: 30px;
+        font-size: 22px;
+        color: #000;
+        text-align: center;
+    }
+    .banner {
+        width: 360px;
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+}
+
+.center {
+    text-align: center;
+    img {
+        display: inline-block;
+        width: 160px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+}
+
+body {
+    background-color: #eee;
+}
+
+.diqu {
+    height: 46px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    .diqushow {
+        display: none;
+        width: 358px;
+        max-height: 234px;
+        position: absolute;
+        top: 47px;
+        left: -1px;
+        background-color: #fff;
+        overflow: auto;
+        border: 1px solid #dedfe0;
+        border-top: none;
+        z-index: 99;
+        li {
+            min-height: 39px;
+            border-bottom: 1px solid #dedfe0;
+            padding-left: 17px;
+            line-height: 39px;
+            cursor: pointer;
+            // width: 360px;
+            list-style: none;
+        }
+    }
+    .diqu-1 {
+        width: 330px;
+        font-size: 16px;
+        color: #000;
+        line-height: 48px;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0;
+    }
+    img {
+        width: 19px;
+        float: right;
+        position: relative;
+        top: -29px;
+        left: -10px;
+    }
+}
+
+.zhu1 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 19px;
+}
+
+.shoujih {
+    margin-top: 15px;
+    height: 48px;
+    border: 1px solid #dedfe0;
+    cursor: pointer;
+    position: relative;
+    .shoujishou {
+        display: none;
+        width: 358px;
+        max-height: 234px;
+        position: absolute;
+        top: 49px;
+        left: -1px;
+        background-color: #fff;
+        overflow: auto;
+        border: 1px solid #dedfe0;
+        border-top: none;
+        z-index: 99;
+        li {
+            min-height: 39px;
+            border-bottom: 1px solid #dedfe0;
+            padding-left: 17px;
+            line-height: 39px;
+            cursor: pointer;
+            // width: 360px;
+            list-style: none;
+            .left {
+                // margin-left: 18px;
+                float: left;
+            }
+            .right {
+                margin-right: 18px;
+                float: right;
+            }
+        }
+    }
+    .haoleft {
+        width: 94px;
+        height: 46px;
+        padding-left: 12px;
+        line-height: 46px;
+        font-size: 16px;
+        color: #000;
+        display: inline-block;
+        img {
+            width: 15px;
+            position: relative;
+            top: 1px;
+            left: 30px;
+        }
+    }
+    .input {
+        float: right;
+        width: 244px;
+        font-size: 16px;
+        color: #252525;
+        height: 46px;
+        line-height: 46px;
+        border: none;
+    }
+}
+
+.tongyi {
+    margin-top: 20px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    .kuang {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #dedfe0;
+        margin-top: 1px;
+        float: left;
+        position: relative;
+        img {
+            width: 14px;
+            display: none;
+        }
+    }
+    span {
+        margin-left: 8px;
+        color: #252525;
+        margin-top: 20px;
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+    }
+    a {
+        color: #456fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .span2 {
+        margin-left: 0;
+        color: #252525;
+    }
+}
+
+.xiayibu {
+    display: block;
+    width: 360px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #456fff;
+}

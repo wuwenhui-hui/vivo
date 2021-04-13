@@ -15,7 +15,11 @@ gulp.task("babel", done => {
     done();
 })
 gulp.task("copyHtml", done => {
-    gulp.src("html/*.html !index.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
+    gulp.src("html/*.html").pipe(gulp.dest("dist/html")).pipe(connect.reload());
+    done();
+})
+gulp.task("copyFont", done => {
+    gulp.src("font/*").pipe(gulp.dest("dist/font")).pipe(connect.reload());
     done();
 })
 
@@ -45,7 +49,7 @@ gulp.task("watch", done => {
     gulp.watch("js/*.js", gulp.series("babel"));
     done();
 })
-gulp.task("bulid", gulp.series("copyIndex", "copyJson", "copyHtml", "copyImg", "copyScss", "babel"))
+gulp.task("bulid", gulp.series("copyIndex", "copyFont", "copyJson", "copyHtml", "copyImg", "copyScss", "babel"))
 gulp.task("server", done => {
     connect.server({
         root: "dist",

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/regist1.css">
+    <script src="../js/jquery.js"></script>
+</head>
+
+<body>
+    <section>
+        <div class="center"><img src="../img/qita/logo.png" alt=""></div>
+        <p>账号注册</p>
+        <div class="banner">
+            <div class="tishi">验证码短信将发送至 13838531313
+            </div>
+            <div class="yanzhengma">
+                <input type="text" password="false" placeholder="请输入短信验证码" placeholder-class="phone-pld" class="input input1">
+                <div class="yzmbtn"><span>获取验证码</span></div>
+            </div>
+            <div class="mima">
+                <input type="text" password="false" placeholder="密码" placeholder-class="phone-pld" class="input input1">
+                <img class="eye eye-off" src="../img/qita/eyes-off.png" alt="">
+                <img class="eye eye-on" src="../img/qita/eyes-on.png" alt="">
+            </div>
+            <div class="mimatishi">密码必须为8-16位字母和数字组合</div>
+            <div class="xiayibu">完成</div>
+            <div class="mimatishi">短信可能会有延时，请耐心等待，如果长时间未收到短信，请60秒后重新获取。</div>
+        </div>
+    </section>
+
+
+
+    <script>
+        $(function() {
+            $(".xiayibu").click(function() {
+                $.get("http://jx.xuzhixiang.top/ap/api/reg.php", {
+                    username: 13838531313,
+                    password: $(".input1").val()
+                }).then(res => {
+                    console.log(res);
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

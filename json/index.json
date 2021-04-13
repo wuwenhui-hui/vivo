@@ -1,5 +1,5 @@
 [{
-    "限时秒杀": {
+    "xsms": {
 
         "data": [{ "imgSrc": "img/miaosha/1.png", "name": "vivo 18W 10000mAh双向快充双向快充", "jj": "直降50元", "price": "89", "yprice": "99", "hot": "img/qita/xianshicx.png" },
             { "imgSrc": "img/miaosha/2.png", "name": "vivo 18W 10000mAh双向快充双向快充", "jj": "直降50元", "price": "89", "yprice": "99", "hot": "img/qita/xianshicx.png" },
@@ -14,7 +14,7 @@
         ]
     },
 
-    "热卖专区": {
+    "rmzq": {
         "data": [{ "imgSrc": "img/remai/1.png", "name": "QOO Neo5", "xq": "高通骁龙870+独立显示芯片", "price": "2699.00" },
             { "imgSrc": "img/remai/2.png", "name": "vivo X60 5G版", "xq": "蔡司光学镜头", "price": "3498.00" },
             { "imgSrc": "img/remai/3.png", "name": "iQOO Z3 5G版", "xq": "高通骁龙768G", "price": "1799.00" }
@@ -22,7 +22,7 @@
         ]
     },
 
-    "精品手机": {
+    "jpsj": {
         "data": [{ "imgSrc": "img/jingpin/1.jpg", "name": "S9", "xq": "新品开售<br/>24免息赠好礼", "price": "2999起" },
             { "imgSrc": "img/jingpin/2.png", "name": "vivo X60 Pro+", "xq": "超感光微云台双主摄", "price": "5998.00" },
             { "imgSrc": "img/jingpin/3.png", "name": "vivo S9e 5G版", "xq": "6400万超清后置", "price": "5998.00" },
@@ -34,7 +34,7 @@
         ]
     },
 
-    "精品配件": {
+    "jppj": {
         "data": [{ "imgSrc": "img/jingpinpj/1.png", "name": "vivo WATCH", "xq": "24小时健康监测", "price": "1299.00" },
             { "imgSrc": "img/jingpinpj/2.png", "name": "双向闪充移动电源", "xq": "轻薄细腻手感", "price": "229.00" },
             { "imgSrc": "img/jingpinpj/3.png", "name": "vivo 缤纷耳机", "xq": "专业调音 三频均衡", "price": "49.00" },
