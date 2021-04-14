@@ -154,7 +154,8 @@
         height: 18px;
         border: 1px solid #dedfe0;
         margin-top: 1px;
-        float: left;
+        // float: left;
+        display: inline-block;
         position: relative;
         margin-right: 8px;
         img {
@@ -167,9 +168,24 @@
         margin-top: 19px;
         font-size: 14px;
         float: right;
+        text-align: right;
     }
     
     body {
         margin: 0;
         padding: 0;
+    }
+    
+    .xiayibu {
+        display: block;
+        width: 360px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 17px;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        cursor: pointer;
+        background-color: #456fff;
     }

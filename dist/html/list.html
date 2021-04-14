@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/list.css">
+    <script src="../js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="jingpinsj-main">
+        <ul>
+            <li>
+                <a href="#"><img src="../img/remai/1.png" alt=""></a>
+                <p>QOO Neo5</p>
+                <p>高通骁龙870+独立显示芯片</p>
+                <p><span>￥</span>2699.00</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        $(function() {
+            let id = location.search;
+            console.log(id);
+            $.get("http://jx.xuzhixiang.top/ap/api/productlist.php?uid=51183&pagesize=100").then(res => {
+                console.log(res.data);
+                var str = ``;
+                for (let i = 0; i < res.data.length; i++) {
+                    str += `<li>
+                <a href="http://localhost:8080/html/detail.html?id=${res.data[i].pid}"><img src="${res.data[i].pimg}" alt=""></a>
+                <p>${res.data[i].pname}</p>
+                <p>${res.data[i].pdesc}</p>
+                <p><span>￥</span>${res.data[i].pprice}</p>
+            </li>`;
+                }
+                $(".jingpinsj-main ul").html(str);
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <h1>我的购物车</h1>
+        <!-- <div class="select">
+            <img src="../img/qita/tongyiduig.png" alt="" class="sel">
+        </div> -->
+
+        <div class="content">
+            <!-- <table class="thead">
+                <tr>
+                    <td class="td1">
+                        <input type="checkbox" name="vehicle" value="Car" /> 全选
+                    </td>
+                    <td class="td2">商品名称</td>
+                    <td class="td3">价格（元）</td>
+                    <td class="td4">数量</td>
+                    <td class="td5">小计（元）</td>
+                    <td class="td6">操作</td>
+                </tr>
+            </table>
+            <table class="tbody">
+                <tr>
+                    <td class="td1">
+                        <input type="checkbox" name="vehicle" value="Car" />
+                    </td>
+                    <td class="td2">
+                        <div>
+                            <img src="../img/jingpin/4.png" alt="">
+                        </div>
+                    </td>
+                    <td class="td3">
+                        <a href="#">vivo Y31s 5G版 6GB+128GB 钛空灰</a>
+                        <br>颜色：钛空灰
+                    </td>
+                    <td class="td4">1690.00</td>
+                    <td class="td5">
+                        <p>
+                            <span class="jia">-</span>
+                            <span class="num">2</span>
+                            <span class="jian">+</span>
+                        </p>
+                    </td>
+                    <td class="td6">3196.00</td>
+                    <td class="td7"><span class="delbtn">删除</span></td>
+                </tr>
+            </table> -->
+
+            <!-- <div class="foot">
+                <ul>
+                    <li>
+                        <input type="checkbox" name="vehicle" value="Car" /> 全选
+                    </li>
+                    <li>删除选中的商品</li>
+                    <li>移入收藏夹</li>
+                </ul>
+                <div class="fr youce">
+                    <div class="fl zuo">
+                        <p class="p1 fr">已选商品 2 件，合计（不含运费）：<span>¥3096.00</span></p>
+                        <p class="p2 fr">( 商品总价： ¥ 3396.00 优惠： ¥ 300.00 )
+                        </p>
+                    </div>
+                    <div class="fl you">
+                        <input type="button" value="结算" class="jiesuan">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+
+    <script>
+        $(function() {
+            let uid = JSON.parse(localStorage.getItem("user")).id;
+            console.log(uid);
+            $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php`, {
+                id: uid
+            }).then(res => {
+                console.log(res.data);
+                var str = `<table class="thead">
+                <tr>
+                    <td class="td1">
+                        <div class="select allsel">
+            <img src="../img/qita/tongyiduig.png" alt="" class="sel">
+        </div> 全选
+                    </td>
+                    <td class="td2">商品名称</td>
+                    <td class="td3">价格（元）</td>
+                    <td class="td4">数量</td>
+                    <td class="td5">小计（元）</td>
+                    <td class="td6">操作</td>
+                </tr>
+            </table>`;
+                for (let i = 0; i < res.data.length; i++) {
+                    var xiaoji = res.data[i].pprice * res.data[i].pnum;
+                    str += `<table class="tbody">
+                <tr>
+                    <td class="td1">
+                        <div class="select xsel">
+            <img src="../img/qita/tongyiduig.png" alt="" class="sel">
+        </div>
+                    </td>
+                    <td class="td2">
+                        <div>
+                            <img src="${res.data[i].pimg}" alt="">
+                        </div>
+                    </td>
+                    <td class="td3">
+                        <a href="#">${res.data[i].pname}</a>
+                        <br>颜色：钛空灰
+                    </td>
+                    <td class="td4 price">${res.data[i].pprice}</td>
+                    <td class="td5">
+                        <p data-id="${res.data[i].pid}">
+                            <span class="jian">-</span>
+                            <span class="num">${res.data[i].pnum}</span>
+                            <span class="jia">+</span>
+                        </p>
+                    </td>
+                    <td class="td6 xiaoji">${xiaoji}.00</td>
+                    <td class="td7"><span class="delbtn">删除</span></td>
+                </tr>
+            </table>`;
+                }
+                if (res.data.length > 0) {
+                    str += ` <div class="foot">
+                <ul>
+                    <li>
+                        <div class="select allsel">
+            <img src="../img/qita/tongyiduig.png" alt="" class="sel">
+        </div> 全选
+                    </li>
+                    <li>删除选中的商品</li>
+                    <li>移入收藏夹</li>
+                </ul>
+                <div class="fr youce">
+                    <div class="fl zuo">
+                        <p class="p1 fr">已选商品 2 件，合计（不含运费）：<span class="allPrice">¥3096.00</span></p>
+                        <p class="p2 fr">( 商品总价： ¥ xxxx.00 优惠： ¥ 300.00 )
+                        </p>
+                    </div>
+                    <div class="fl you">
+                        <input type="button" value="结算" class="jiesuan">
+                    </div>
+                </div>
+            </div>`;
+                }
+                $(".content").html(str);
+                // console.log($(".jian"))
+                allprice();
+
+
+                $(".jian").click(function() {
+                    var dataid = $(this).parent().attr("data-id");
+                    var index = $(".jian").index($(this));
+                    var xj;
+                    var zj;
+                    // console.log(index, dataid);
+                    var num = $(".num").eq(index).text() - 1;
+                    if (num <= 1) {
+                        num = 1;
+                        $(".num").eq(index).text(1);
+                    } else {
+                        $(".num").eq(index).text(num);
+                    }
+                    allprice();
+
+                    xj = parseInt($(".price").eq(index).text()) * num;
+                    $(".xiaoji").eq(index).text(xj + ".00");
+
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                        uid: uid,
+                        pid: dataid,
+                        pnum: num
+                    }).then(res => {
+                        // console.log(res);
+                    })
+                })
+
+                $(".jia").click(function() {
+                    var dataid = $(this).parent().attr("data-id");
+                    var index = $(".jia").index($(this));
+                    console.log(index);
+                    var num = $(".num").eq(index).text() * 1 + 1;
+                    $(".num").eq(index).text(num);
+                    xj = parseInt($(".price").eq(index).text()) * num;
+                    $(".xiaoji").eq(index).text(xj + ".00");
+                    allprice();
+
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
+                        uid: uid,
+                        pid: dataid,
+                        pnum: num
+                    }).then(res => {
+                        console.log(res);
+                    })
+                })
+
+
+                $(".allsel").click(function() {
+
+                    if ($(this).find(".sel").css("display") === "none") {
+                        $(".select").find(".sel").css({
+                            display: "block"
+                        })
+                    } else {
+                        $(".select").find(".sel").css({
+                            display: "none"
+                        })
+                    }
+                    allprice();
+
+                })
+
+                $(".xsel").click(function() {
+                    if ($(this).find(".sel").css("display") === "none") {
+                        $(this).find(".sel").css({
+                            display: "block"
+                        })
+                        for (var i = 0; i < $(".xsel").length; i++) {
+                            if ($(".xsel").eq(i).find(".sel").css("display") === "none") {
+                                $(".allsel").find(".sel").css({
+                                    display: "none"
+                                })
+                                break;
+                            } else {
+                                $(".allsel").find(".sel").css({
+                                    display: "block"
+                                })
+                            }
+
+                        }
+
+                    } else {
+                        $(this).find(".sel").css({
+                            display: "none"
+                        })
+                        $(".allsel").find(".sel").css({
+                            display: "none"
+                        })
+                    }
+                    allprice();
+                })
+
+
+                function allprice() {
+                    var alljia = 0;
+
+                    for (var i = 0; i < $(".xsel").length; i++) {
+                        if ($(".xsel").eq(i).find(".sel").css("display") === "block") {
+                            alljia += parseInt($(".xiaoji").eq(i).text());
+                            // console.log($(".xiaoji").eq(i).text());
+                        }
+                    }
+                    $(".allPrice").text(alljia + ".00");
+
+                }
+
+
+            })
+        })
+    </script>
+</body>
+
+</html>

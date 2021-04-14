@@ -53,6 +53,7 @@ gulp.task("bulid", gulp.series("copyIndex", "copyFont", "copyJson", "copyHtml", 
 gulp.task("server", done => {
     connect.server({
         root: "dist",
+        port: 8080,
         livereload: true
     })
     done();

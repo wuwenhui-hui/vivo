@@ -6,10 +6,89 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <script src="../js/jquery.js"></script>
 </head>
 
 <body>
-    <div></div>
+    <div class="banner">
+        <img src="../img/jingpin/3.png" alt="" style="float: left;">
+        <div class="aside">
+            <h1>vivo Y30g 8GB+128GB 水漾蓝</h1>
+            <p class="p1"><span>【下单立减100元】 </span>5000mAh大电池|18W双引擎闪充|后置AI双摄</p>
+            <div class="price clean">
+                <div class="fl">
+                    <p><span>￥</span>1499.00</p>
+                </div>
+                <div class="fr">
+                    <div><span>赠品</span></div>
+                    <div><span>满减</span>满1400元减100元</div>
+                    <div><span>积分</span>购物送积分</div>
+
+                </div>
+            </div>
+            <input type="button" value="加入购物车" class="cartbtn">
+            <input type="button" value="立即购买" class="baybtn">
+        </div>
+
+    </div>
+
+
+    <script>
+        $(function() {
+            let id = location.search.split("=")[1];
+            let uid = JSON.parse(localStorage.getItem("user")).id;
+            console.log(uid);
+            $.get("http://jx.xuzhixiang.top/ap/api/detail.php", {
+                id: id
+            }).then(res => {
+                // console.log(res);
+                var str = ``;
+                str = `
+                <img src="${res.data.pimg}" alt="" style="float: left;">
+        <div class="aside">
+            <h1>${res.data.pname}</h1>
+            <p class="p1"><span>【下单立减100元】 </span>${res.data.desc}</p>
+            <div class="price clean">
+                <div class="fl">
+                    <p><span>￥</span>${res.data.pprice}</p>
+                </div>
+                <div class="fr">
+                    <div><span>赠品</span></div>
+                    <div><span>满减</span>满1400元减100元</div>
+                    <div><span>积分</span>购物送积分</div>
+                </div>
+            </div>
+            <input type="button" value="加入购物车" class="cartbtn">
+            <input type="button" value="立即购买" class="baybtn">
+        </div>`;
+                $(".banner").html(str);
+
+
+
+                $(".cartbtn").click(function() {
+                    $.get("http://jx.xuzhixiang.top/ap/api/add-product.php?", {
+                        uid: uid,
+                        pid: id,
+                        pnum: 1
+                    }).then(res => {
+                        console.log(res);
+                        // $.get("http://jx.xuzhixiang.top/ap/api/cart-list.php?uid=51183", {
+                        //     id: uid
+                        // }).then(res1 => {
+                        //     console.log(res1);
+                        // })
+                        $(location).attr("href", "http://localhost:8080/html/cart.html");
+                    })
+                })
+            })
+
+
+
+
+        })
+    </script>
 </body>
 
 </html>

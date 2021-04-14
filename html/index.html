@@ -26,12 +26,12 @@
                         <a class="vivologo iconfont icon-vivo"></a>
                         <a class="vivologo iconfont icon-008duihuakuang-7"></a>
                         <div class="dlzc">
-                            <p><a href="#">登陆</a></p>
-                            <p><a href="http://localhost:8080/html/regist.html">注册</a></p>
+                            <p><a href="http://localhost:8080/html/login.html">登陆</a></p>
+                            <p><a href="http://localhost:8080/html/regist1.html">注册</a></p>
                         </div>
                         <img class="QR" src="img/qita/QRCode.png" alt="">
                         <li class="xiazai"><a href="#">下载APP</a></li>
-                        <li><a href="#">购物车</a></li>
+                        <li><a href="http://localhost:8080/html/cart.html">购物车</a></li>
                         <li class="grzx"><a href="#" style="padding-right: 0;">个人中心</a></li>
                     </div>
                 </div>
@@ -693,13 +693,13 @@
     <div class="container banner-xia">
         <ul>
             <li>
-                <a href="#"><img src="img/banner-xia/1.jpg" alt="" class="floor"></a>
+                <a href="http://localhost:8080/html/list.html"><img src="img/banner-xia/1.jpg" alt="" class="floor"></a>
             </li>
             <li>
-                <a href="#" class="floor"><img src="img/banner-xia/2.jpg" alt=""></a>
+                <a href="http://localhost:8080/html/list.html" class="floor"><img src="img/banner-xia/2.jpg" alt=""></a>
             </li>
             <li>
-                <a href="#" class="floor"><img src="img/banner-xia/3.jpg" alt=""></a>
+                <a href="http://localhost:8080/html/list.html" class="floor"><img src="img/banner-xia/3.jpg" alt=""></a>
             </li>
         </ul>
     </div>
@@ -1091,7 +1091,7 @@
                 for (let i = 0; i < res.xsms.data.length; i++) {
                     str += `<li >
                     <div class="floor">
-                        <a href="#"><img src=${res.xsms.data[i].imgSrc} alt=""></a>
+                        <a href="http://localhost:8080/html/list.html"><img src=${res.xsms.data[i].imgSrc} alt=""></a>
                         <p>${res.xsms.data[i].name} </p>
                         <p>${res.xsms.data[i].jj}</p>
                         <p><span>￥</span>${res.xsms.data[i].price}<span>￥${res.xsms.data[i].yprice}</span></p>
@@ -1112,7 +1112,7 @@
                 var str1 = ``;
                 for (let i = 0; i < res.rmzq.data.length; i++) {
                     str1 += `<li class="floor">
-                    <a href="#"><img src="${res.rmzq.data[i].imgSrc}" alt=""></a>
+                    <a href="http://localhost:8080/html/list.html"><img src="${res.rmzq.data[i].imgSrc}" alt=""></a>
                     <p>${res.rmzq.data[i].name}</p>
                     <p>${res.rmzq.data[i].xq}</p>
                     <p><span>￥</span>${res.rmzq.data[i].price}</p>
@@ -1124,11 +1124,11 @@
                 for (let i = 0; i < res.jpsj.data.length; i++) {
                     if (i == 0) {
                         str2 += `<li class="jingpinsj-main-first floor">
-                    <a href="#"><img src=${res.jpsj.data[i].imgSrc} alt=""></a>
+                    <a href="http://localhost:8080/html/list.html"><img src=${res.jpsj.data[i].imgSrc} alt=""></a>
                 </li>`;
                     } else {
                         str2 += `<li class="floor">
-                    <a href="#"><img src=${res.jpsj.data[i].imgSrc} alt=""></a>
+                    <a href="http://localhost:8080/html/list.html"><img src=${res.jpsj.data[i].imgSrc} alt=""></a>
                     <p>${res.jpsj.data[i].name}</p>
                     <p>${res.jpsj.data[i].xq}</p>
                     <p><span>￥</span>${res.jpsj.data[i].price}</p>
@@ -1140,7 +1140,7 @@
                 var str3 = ``;
                 for (let i = 0; i < res.jppj.data.length; i++) {
                     str3 += `<li class="floor">
-                    <a href="#"><img src=${res.jppj.data[i].imgSrc} alt=""></a>
+                    <a href="http://localhost:8080/html/list.html"><img src=${res.jppj.data[i].imgSrc} alt=""></a>
                     <p>${res.jppj.data[i].name}</p>
                     <p>${res.jppj.data[i].xq}</p>
                     <p><span>￥</span>${res.jppj.data[i].price}</p>
@@ -1264,10 +1264,6 @@
                         display: "none"
                     })
                 })
-
-
-
-
 
 
         })

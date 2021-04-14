@@ -15,14 +15,14 @@
         <div class="center"><img src="../img/qita/logo.png" alt=""></div>
         <p>账号注册</p>
         <div class="banner">
-            <div class="tishi">验证码短信将发送至 13838531313
+            <div class="tishi">
             </div>
             <div class="yanzhengma">
-                <input type="text" password="false" placeholder="请输入短信验证码" placeholder-class="phone-pld" class="input input1">
-                <div class="yzmbtn"><span>获取验证码</span></div>
+                <input type="text" password="false" placeholder="请输入手机号" placeholder-class="phone-pld" class="input input1 sjh">
+                <!-- <div class="yzmbtn"><span>获取验证码</span></div> -->
             </div>
             <div class="mima">
-                <input type="text" password="false" placeholder="密码" placeholder-class="phone-pld" class="input input1">
+                <input type="text" password="false" placeholder="密码" placeholder-class="phone-pld" class="input input1 pw">
                 <img class="eye eye-off" src="../img/qita/eyes-off.png" alt="">
                 <img class="eye eye-on" src="../img/qita/eyes-on.png" alt="">
             </div>
@@ -38,10 +38,16 @@
         $(function() {
             $(".xiayibu").click(function() {
                 $.get("http://jx.xuzhixiang.top/ap/api/reg.php", {
-                    username: 13838531313,
-                    password: $(".input1").val()
+                    username: $(".sjh").val(),
+                    password: $(".pw").val()
                 }).then(res => {
-                    console.log(res);
+
+
+                    if (res.code == 1) {
+                        alert("注册成功");
+                        location.href = "http://localhost:8080/html/login.html"
+                    }
+
                 })
             })
         })
