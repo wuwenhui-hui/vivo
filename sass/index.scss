@@ -905,7 +905,91 @@ body {
                 line-height: 90px;
                 text-align: center;
                 font-size: 18px;
+                .iconfont {
+                    font-size: 30px;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
             }
         }
     }
+}
+
+.dl {
+    width: 1440px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // background-color: antiquewhite;
+    margin: 0 auto;
+    .dd {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 18px;
+        width: 154px;
+        float: left;
+        h3 {
+            font-size: 16px;
+            line-height: 17px;
+            padding-bottom: 40px;
+            font-weight: 900;
+        }
+        p {
+            font-size: 14px;
+            line-height: 17px;
+            margin-bottom: 18px;
+        }
+    }
+    .frr {
+        p {
+            margin-bottom: 29px;
+            line-height: 18px;
+            font-size: 16px;
+        }
+        .ff {
+            margin-bottom: 25px;
+            p {
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 4px;
+                span {
+                    font-size: 14px;
+                    color: #8a8f99;
+                }
+            }
+            h2 {
+                color: #415fff;
+                font-size: 28px;
+                line-height: 30px;
+            }
+        }
+        .tt {
+            margin-top: 57px;
+            p {
+                display: block;
+                font-size: 16px;
+                line-height: 18px;
+                margin-bottom: 17px;
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 40px;
+                    height: 34px;
+                    margin-right: 14px;
+                    position: relative;
+                    cursor: pointer;
+                }
+            }
+        }
+        .iconfont {
+            font-size: 28px;
+            line-height: 28px;
+        }
+    }
+}
+
+.icon-iconfontzhizuobiaozhun023146 {
+    // color: azure;
+    margin-right: 5px;
 }

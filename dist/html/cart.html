@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>购物车</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cart.css">
     <script src="../js/jquery.js"></script>
@@ -102,10 +102,10 @@
                     <td class="td5">小计（元）</td>
                     <td class="td6">操作</td>
                 </tr>
-            </table>`;
+            </table><table class="tbody">`;
                 for (let i = 0; i < res.data.length; i++) {
                     var xiaoji = res.data[i].pprice * res.data[i].pnum;
-                    str += `<table class="tbody">
+                    str += `
                 <tr>
                     <td class="td1">
                         <div class="select xsel">
@@ -130,10 +130,10 @@
                         </p>
                     </td>
                     <td class="td6 xiaoji">${xiaoji}.00</td>
-                    <td class="td7"><span class="delbtn">删除</span></td>
-                </tr>
-            </table>`;
+                    <td class="td7" data-id="${res.data[i].pid}"><span class="deelbtn">删除</span></td>
+                </tr>`;
                 }
+                str += '</table>'
                 if (res.data.length > 0) {
                     str += ` <div class="foot">
                 <ul>
@@ -147,7 +147,7 @@
                 </ul>
                 <div class="fr youce">
                     <div class="fl zuo">
-                        <p class="p1 fr">已选商品 2 件，合计（不含运费）：<span class="allPrice">¥3096.00</span></p>
+                        <p class="p1 fr">已选商品  合计（不含运费）：<span class="allPrice">¥3096.00</span></p>
                         <p class="p2 fr">( 商品总价： ¥ xxxx.00 优惠： ¥ 300.00 )
                         </p>
                     </div>
@@ -169,16 +169,16 @@
                     var zj;
                     // console.log(index, dataid);
                     var num = $(".num").eq(index).text() - 1;
-                    if (num <= 1) {
+                    if (num < 1) {
                         num = 1;
                         $(".num").eq(index).text(1);
                     } else {
                         $(".num").eq(index).text(num);
                     }
-                    allprice();
 
                     xj = parseInt($(".price").eq(index).text()) * num;
                     $(".xiaoji").eq(index).text(xj + ".00");
+                    allprice();
 
                     $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
                         uid: uid,
@@ -268,6 +268,33 @@
 
                 }
 
+                console.log($(".deelbtn"));
+                // $('.content').on('click', '.deelbtn', function() {
+                //     console.log(1111)
+                // })
+                $(".deelbtn").click(function() {
+                    console.log(11);
+                    var dataid = $(this).parent().attr("data-id");
+
+                    $(this).parent().parent().remove();
+                    if ($(".deelbtn").length == 0) {
+                        $(".foot").remove();
+                        $(".thead").remove();
+
+                    }
+
+                    $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
+                        uid: uid,
+                        pid: dataid
+                    }).theny(res => {
+                        console.log(res);
+                    })
+                })
+
+                if ($(".deelbtn").length == 0) {
+                    $(".foot").remove();
+                    $(".thead").remove();
+                }
 
             })
         })
