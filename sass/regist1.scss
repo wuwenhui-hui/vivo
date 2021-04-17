@@ -29,6 +29,7 @@ section {
                 top: 15px;
                 left: 75px;
                 width: 21px;
+                cursor: pointer;
             }
             .eye-on {
                 display: none;
@@ -63,11 +64,19 @@ section {
     }
 }
 
-.mimatishi {
+.mimatishi,
+.sjhtishi,
+.yxmima {
     margin-top: 10px;
     font-size: 14px;
     color: #999;
     line-height: 19px;
+}
+
+.sjhtishi,
+.yxmima {
+    color: red;
+    display: none;
 }
 
 .center {
@@ -92,6 +101,7 @@ body {
     height: 46px;
     line-height: 46px;
     border: none;
+    outline: none;
 }
 
 .xiayibu {

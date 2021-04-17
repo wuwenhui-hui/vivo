@@ -175,10 +175,11 @@
                     } else {
                         $(".num").eq(index).text(num);
                     }
-                    allprice();
-
                     xj = parseInt($(".price").eq(index).text()) * num;
                     $(".xiaoji").eq(index).text(xj + ".00");
+                    allprice();
+
+
 
                     $.get("http://jx.xuzhixiang.top/ap/api/cart-update-num.php", {
                         uid: uid,
@@ -282,6 +283,20 @@
                         $(".thead").remove();
 
                     }
+                    for (var i = 0; i < $(".xsel").length; i++) {
+                        if ($(".xsel").eq(i).find(".sel").css("display") === "none") {
+                            $(".allsel").find(".sel").css({
+                                display: "none"
+                            })
+                            break;
+                        } else {
+                            $(".allsel").find(".sel").css({
+                                display: "block"
+                            })
+                        }
+
+                    }
+                    allprice();
 
                     $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", {
                         uid: uid,
@@ -291,10 +306,6 @@
                     })
                 })
 
-                if ($(".deelbtn").length == 0) {
-                    $(".foot").remove();
-                    $(".thead").remove();
-                }
 
             })
         })

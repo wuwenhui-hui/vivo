@@ -1,0 +1,133 @@
+section {
+  width: 860px;
+  margin: 100px auto;
+  min-height: 670px;
+  background-color: #fff;
+}
+
+section p:nth-child(2) {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+}
+
+section .banner {
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+section .banner .tishi {
+  font-size: 15px;
+  color: #252525;
+}
+
+section .banner .mima,
+section .banner .yanzhengma {
+  margin-top: 10px;
+  height: 48px;
+  border: 1px solid #dedfe0;
+  line-height: 48px;
+}
+
+section .banner .mima .eye,
+section .banner .yanzhengma .eye {
+  position: relative;
+  top: 15px;
+  left: 75px;
+  width: 21px;
+  cursor: pointer;
+}
+
+section .banner .mima .eye-on,
+section .banner .yanzhengma .eye-on {
+  display: none;
+}
+
+section .banner .mima .eye-off,
+section .banner .yanzhengma .eye-off {
+  display: block;
+}
+
+section .banner .input1 {
+  float: left;
+  width: 228px;
+  padding-left: 12px;
+}
+
+section .banner .yzmbtn {
+  width: 100px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: center;
+  color: #456fff;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+}
+
+section .banner .yzmbtn span {
+  font-size: 15px;
+  line-height: 38px;
+  border-left: 1px solid #ccc;
+  text-align: center;
+  display: inline-block;
+  width: 100px;
+}
+
+.mimatishi,
+.sjhtishi,
+.yxmima {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #999;
+  line-height: 19px;
+}
+
+.sjhtishi,
+.yxmima {
+  color: red;
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.center img {
+  display: inline-block;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+body {
+  background-color: #eee;
+}
+
+.input {
+  float: right;
+  width: 244px;
+  font-size: 16px;
+  color: #252525;
+  height: 46px;
+  line-height: 46px;
+  border: none;
+  outline: none;
+}
+
+.xiayibu {
+  display: block;
+  width: 360px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #456fff;
+}

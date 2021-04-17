@@ -64,11 +64,13 @@
                             <img src="../img/qita/diqujiantou.png" alt="">
                         </div>
                         <input data-v-35e41a53="" type="text" placeholder="请输入手机号" placeholder-class="phone-pld" class="input usersjh">
-
+                        <div class="sjhtishi">请输入有效手机号</div>
                         <div class="yanzhengma">
-                            <input type="text" password="false" placeholder="请输入密码" placeholder-class="phone-pld" class="input input1 userpw">
-                            <div class="yzmbtn"><span></span></div>
+                            <input type="password" password="false" placeholder="请输入密码" placeholder-class="phone-pld" class="input input1 userpw">
+                            <div class="yzmbtn"><img class="eye eye-off" src="../img/qita/eyes-off.png" alt="">
+                                <img class="eye eye-on" src="../img/qita/eyes-on.png" alt=""></div>
                         </div>
+                        <div class="yxmima">请输入有效密码</div>
                         <div class="lisngz">
                             <div class="kuang">
                                 <img src="../img/qita/tongyiduig.png" alt="">
@@ -85,28 +87,96 @@
 
 
     <script>
-        $(".queding").click(function() {
-            $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
-                username: $(".usersjh").val(),
-                password: $(".userpw").val()
-            }).then(res => {
-                console.log(res);
-                if (res.code == 1) {
-                    data = {
-                        id: res.data.id,
-                        username: res.data.username,
-                        passwd: res.data.passwd,
-                        token: res.data.token
-                    }
-                    localStorage.setItem("user", JSON.stringify(data));
-                    $(location).attr("href", "http://localhost:8080");
+        $(function() {
 
 
+            $(".eye").click(function() {
+                if ($(".eye-on").css("display") === "block") {
+                    $(".eye-on").css({
+                        display: "none"
+                    });
+                    $(".eye-off").css({
+                        display: "block"
+                    })
+
+                    $(".userpw").attr("type", "password");
+
+                } else {
+                    $(".eye-on").css({
+                        display: "block"
+                    });
+                    $(".eye-off").css({
+                        display: "none"
+                    })
+                    $(".userpw").attr("type", "text");
+                }
+            })
+            var sjhflag = false;
+            var mimaflag = false;
+            $(".usersjh").change(function() {
+                let reg = /^1(3|4|5|6|7|8|9)\d{9}$/;
+                console.log(reg.test($(this).val()));
+                if (reg.test($(this).val())) {
+                    $(".sjhtishi").css({
+                        display: "none"
+                    })
+                    sjhflag = true;
+                } else {
+                    $(".sjhtishi").css({
+                        display: "block"
+                    })
+                    sjhflag = false;
+                }
+            })
+
+            $(".userpw").change(function() {
+                let reg = /\w{8,16}$/;
+                console.log(reg.test($(this).val()));
+                if (reg.test($(this).val())) {
+                    $(".yxmima").css({
+                        display: "none"
+                    })
+                    mimaflag = true;
+                } else {
+                    $(".yxmima").css({
+                        display: "block"
+                    })
+                    mimaflag = false;
+                }
+            })
+
+
+            $(".queding").click(function() {
+
+                if (mimaflag == true && sjhflag == true) {
+                    $.get("http://jx.xuzhixiang.top/ap/api/login.php", {
+                        username: $(".usersjh").val(),
+                        password: $(".userpw").val()
+                    }).then(res => {
+                        console.log(res);
+                        if (res.code == 1) {
+                            data = {
+                                id: res.data.id,
+                                username: res.data.username,
+                                passwd: res.data.passwd,
+                                token: res.data.token
+                            }
+                            localStorage.setItem("user", JSON.stringify(data));
+                            $(location).attr("href", "http://localhost:8080");
+
+
+                        }
+
+                    });
                 }
 
-            });
 
-            // location.herf = "http://localhost:8080/html/regist1.html";
+                // location.herf = "http://localhost:8080/html/regist1.html";
+            })
+
+
+
+
         })
     </script>
 </body>
